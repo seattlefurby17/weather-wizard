@@ -15,7 +15,7 @@
   "homepage": "https://seattlefurby17.github.io/weather-wizard",
   "scripts": {
     "predeploy": "yarn build",
-    "deploy": "gh-pages -b main -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "start-api": "cd ../weather-app-test-api && venv/bin/flask run --no-debugger",
