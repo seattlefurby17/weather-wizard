@@ -11,7 +11,6 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
   BASE_URL= "https://hidden-escarpment-16617.herokuapp.com/"
 }
 
-
 function App() {
 
   const [location, setLocation] = useState(null);
