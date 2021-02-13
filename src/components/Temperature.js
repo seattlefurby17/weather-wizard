@@ -46,6 +46,7 @@ const Temperature = ({location, baseUrl}) => {
   // if there is a location, display and vice versa
   const locationDisplay = result && (
     <div>
+        <p>{dateBuilder(new Date())}</p>
         <p> {result.name}, {result.sys.country}</p>
         {result.weather.length && (
           <p>{result.weather[0].main}</p>

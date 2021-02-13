@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 import LocationSearchForm from './components/LocationSearchForm';
