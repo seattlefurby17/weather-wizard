@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/weather-wizard/static/css/main.91a6b472.chunk.css",
-    "main.js": "/weather-wizard/static/js/main.557aa094.chunk.js",
-    "main.js.map": "/weather-wizard/static/js/main.557aa094.chunk.js.map",
-    "runtime-main.js": "/weather-wizard/static/js/runtime-main.3941c588.js",
-    "runtime-main.js.map": "/weather-wizard/static/js/runtime-main.3941c588.js.map",
-    "static/css/2.150d169a.chunk.css": "/weather-wizard/static/css/2.150d169a.chunk.css",
-    "static/js/2.e38d6f75.chunk.js": "/weather-wizard/static/js/2.e38d6f75.chunk.js",
-    "static/js/2.e38d6f75.chunk.js.map": "/weather-wizard/static/js/2.e38d6f75.chunk.js.map",
-    "static/js/3.5d6d01b0.chunk.js": "/weather-wizard/static/js/3.5d6d01b0.chunk.js",
-    "static/js/3.5d6d01b0.chunk.js.map": "/weather-wizard/static/js/3.5d6d01b0.chunk.js.map",
+    "main.css": "/weather-wizard/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/weather-wizard/static/js/main.4415672e.chunk.js",
+    "main.js.map": "/weather-wizard/static/js/main.4415672e.chunk.js.map",
+    "runtime-main.js": "/weather-wizard/static/js/runtime-main.deb013ae.js",
+    "runtime-main.js.map": "/weather-wizard/static/js/runtime-main.deb013ae.js.map",
+    "static/css/2.122ca0d8.chunk.css": "/weather-wizard/static/css/2.122ca0d8.chunk.css",
+    "static/js/2.4ae7d693.chunk.js": "/weather-wizard/static/js/2.4ae7d693.chunk.js",
+    "static/js/2.4ae7d693.chunk.js.map": "/weather-wizard/static/js/2.4ae7d693.chunk.js.map",
+    "static/js/3.e1152b7d.chunk.js": "/weather-wizard/static/js/3.e1152b7d.chunk.js",
+    "static/js/3.e1152b7d.chunk.js.map": "/weather-wizard/static/js/3.e1152b7d.chunk.js.map",
     "index.html": "/weather-wizard/index.html",
-    "static/css/2.150d169a.chunk.css.map": "/weather-wizard/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.91a6b472.chunk.css.map": "/weather-wizard/static/css/main.91a6b472.chunk.css.map",
-    "static/js/2.e38d6f75.chunk.js.LICENSE.txt": "/weather-wizard/static/js/2.e38d6f75.chunk.js.LICENSE.txt"
+    "static/css/2.122ca0d8.chunk.css.map": "/weather-wizard/static/css/2.122ca0d8.chunk.css.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/weather-wizard/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.4ae7d693.chunk.js.LICENSE.txt": "/weather-wizard/static/js/2.4ae7d693.chunk.js.LICENSE.txt",
+    "static/media/weather-icons.css": "/weather-wizard/static/media/weathericons-regular-webfont.e218aee6.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.3941c588.js",
-    "static/css/2.150d169a.chunk.css",
-    "static/js/2.e38d6f75.chunk.js",
-    "static/css/main.91a6b472.chunk.css",
-    "static/js/main.557aa094.chunk.js"
+    "static/js/runtime-main.deb013ae.js",
+    "static/css/2.122ca0d8.chunk.css",
+    "static/js/2.4ae7d693.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.4415672e.chunk.js"
   ]
 }
