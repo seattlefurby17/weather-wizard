@@ -8,7 +8,7 @@ let BASE_URL =''
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
   BASE_URL ="http://localhost:5000/"
 } else {
-  BASE_URL= "https://hidden-escarpment-16617.herokuapp.com/"
+  BASE_URL= "https://flask-backend-solo.herokuapp.com/"
 }
 
 function App() {
