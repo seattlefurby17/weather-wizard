@@ -40,7 +40,7 @@ const Temperature = ({location, baseUrl}) => {
     let month = months[data.getMonth()];
     let year = data.getFullYear();
 
-    return `${day} ${date} ${month} ${year}`
+    return `${day} ${month} ${date} ${year}`
   } 
 
   // if there is a location, display and vice versa
@@ -55,16 +55,29 @@ const Temperature = ({location, baseUrl}) => {
   );
 
   const currentTemperature = result ? result.main.temp : 0;
-  const weatherCondition = (result && result.weather.length) && result.weather[0].main
-  let weatherClass = (currentTemperature > 50) ? 'app-spring' : 'app'
-  if (weatherCondition === 'Clouds') {
-    weatherClass = 'app-windy'
+  // const weatherCondition = (result && result.weather.length) && result.weather[0].main
+  // let weatherClass = (currentTemperature > 50) ? 'app-autumn' : 'app'
+  
+  // if (weatherCondition === 'Clouds') {
+  //   weatherClass = 'app-spring'
+  // } else if (weatherCondition === 'Clear') {
+  //   weatherClass = 'app-summer'
+  // }
+  let weatherClass = 'app';
+  if (currentTemperature > 45 ) {
+    weatherClass = 'app-spring'
+  } else if (currentTemperature > 75) {
+    weatherClass = 'app-summer'
+  } else {
+    weatherClass = 'app-autumn'
   }
 
   return(
     <main>
       <div className={weatherClass}>
+        <div className='weather-box'>
         { errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : `${Math.round(currentTemperature)}ºF` }
+        </div>
       </div>
       <div className='location-box'>
         <div className='location'> 
