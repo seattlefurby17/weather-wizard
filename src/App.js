@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h3> This is testing deployment </h3>
+      {/* <h3> This is testing deployment </h3> */}
       <div className='weather-box'>
           <div className='temp'>
             <LocationSearchForm searchCurrentCityCallBack={ onLocationPicked } />
