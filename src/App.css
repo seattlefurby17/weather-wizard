@@ -43,7 +43,7 @@ p {
 }
 
 .app {
-  background-image: url(./images/winter.jpeg);
+  background-image: url(./images/winter.jpg);
   background-size:cover ;
   background-position: bottom;
   transition: 0.4 ease-out;
@@ -58,8 +58,8 @@ p {
   
 }
 
-.app-windy {
-  background-image: url(./images/windy.jpg);
+.app-autumn {
+  background-image: url(./images/autumn.jpg);
 }
 
 main {
