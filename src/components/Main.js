@@ -4,6 +4,7 @@ import Temperature from './Temperature';
 import Forecast from './Forecast';
 
 const Main = ({location, baseUrl}) => (
+
   <Switch>
     <Route exact path='/' component={Home}></Route>
     <Route exact path='/temperature'>

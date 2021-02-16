@@ -72,7 +72,7 @@ const Temperature = ({location, baseUrl}) => {
     <div>
         <p>{dateBuilder(new Date())}</p>
         <p> {result.city}, {result.country}</p>
-        <p>{result.main}</p>
+        {/* <p>{result.main}</p> */}
     </div>
   );
 
@@ -103,16 +103,6 @@ const Temperature = ({location, baseUrl}) => {
     weatherClass ='app-summer';
   }
 
-  // if (currentTemperature > 45 && currentTemperature < 70) {
-  //   weatherClass = 'app-spring'
-  // } else if (currentTemperature < 40) {
-  //   weatherClass = 'app-summer'
-  // } else if (currentTemperature > 75) {
-  //   weatherClass = 'app-summer'
-  // } else {
-  //   weatherClass = 'app-autumn'
-  // }
-
   if (result === null) { 
     return  ( 
         <div>Loading...</div> 
@@ -120,18 +110,20 @@ const Temperature = ({location, baseUrl}) => {
   }
 
   return(
-    <main>
+    <main className={weatherClass}>
       <div className='location-box'>
         <div className='location'> 
           {locationDisplay}
+          <i className={`wi wi-owm-${result.icon} display1`}></i>
         </div>
       </div>
-      <i className={`wi wi-owm-${result.icon}`}></i>
-      <div className={weatherClass} >
+      <div  >
         <div className='weather-box'>
           <div className='temp'>
             { errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : `${Math.round(result.temp)}ºF`}
+            <p className='condition'>{result.main}</p>
           </div>
+          
           <div>{maxminTemp(result.temp_min, result.temp_max)}</div>
         </div>
       </div>

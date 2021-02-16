@@ -1,10 +1,10 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
-import Carousel from 'react-bootstrap/Carousel';
+import Col from 'react-bootstrap/Col'
 import './Forecast.css';
 
-// The location being passed in from App.js as an object-result from the user input
 const Forecast = ({location, baseUrl}) => {
   const FORECAST_URL = baseUrl + 'forecast?currentCity='
 
@@ -79,12 +79,11 @@ const Forecast = ({location, baseUrl}) => {
   } 
 
   const forecastDisplay = arraysMaxMin.map((dailyForecast, index) => (
-    <Carousel.Item className='daily-forecast' key={index}> 
-        <p>{dateBuilder(dailyForecast.date)} </p>
-        <p>H: {Math.round(dailyForecast.max_temp)}ºF</p>
-        <p>L: {Math.round(dailyForecast.min_temp)}ºF</p>
-    </Carousel.Item>
-      
+    <Row md={1} xs={2} className='daily-forecast' key={index}> 
+        <Col>{dateBuilder(dailyForecast.date)} </Col>
+        <Col>H: {Math.round(dailyForecast.max_temp)}ºF</Col>
+        <Col>L: {Math.round(dailyForecast.min_temp)}ºF</Col>
+    </Row>
   ));
 
   const weatherCondition = (forecast?.length && forecast[0].weather?.length) && forecast[0].weather[0].main
@@ -94,11 +93,9 @@ const Forecast = ({location, baseUrl}) => {
   }
 
   return(
-    <Row className={forecastClass}>
-      <Carousel className='forecast-box'>
-        { forecastDisplay }
-      </Carousel>
-    </Row>
+    <Container fluid className={forecastClass}>
+      { forecastDisplay }
+    </Container>
   );
 
 }
