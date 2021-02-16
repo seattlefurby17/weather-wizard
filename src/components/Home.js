@@ -2,8 +2,13 @@ import React from 'react';
 import './Home.css';
 
 const Home = () => (
-  <div className='home-page app'>
-    <h1>This is my homepage</h1>
+  <div className='container'>
+    <div className='home-page app'>
+      <div class="typewriter">
+        <h3>Welcome to the Solo weather station</h3>
+        <h6>Your home to the most trusted weather temperature and forecast</h6>
+      </div>
+    </div>
   </div>
   
 );

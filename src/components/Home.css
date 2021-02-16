@@ -1,3 +1,29 @@
 .home-page {
   height: 100vh;
 }
+
+.typewriter h3 {
+  display: flex;
+  /* Ensures the content is not revealed until the animation */
+  overflow: hidden; 
+  /* Keeps the content on a single line */
+  white-space: nowrap; 
+  margin: 0 auto; 
+  text-align: center;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.typewriter h6 {
+  text-align: center;
+  display: block;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}

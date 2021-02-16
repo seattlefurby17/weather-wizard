@@ -70,5 +70,9 @@ main {
   padding: 25px;
 }
 
-
+.footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-evenly;
+}
 

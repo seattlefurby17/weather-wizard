@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 import './App.css';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
@@ -20,6 +21,8 @@ function App() {
     setLocation(currentCity)
   }
 
+  const tagUrl ='https://seattlefurby17.github.io/weather-wizard';
+  
   return (
     <Container className="App">
       <header className="App-header">
@@ -32,6 +35,12 @@ function App() {
           </div>
         </div>
       </header>
+      <div class="footer">
+        <a href={tagUrl}> Copyright</a>
+        <a href={tagUrl}>All Rights Reserved</a>
+        <a href={tagUrl}>Terms of Uses</a>
+        <a href={tagUrl}>HanhSolo</a>
+      </div>
     </Container>
   );
 }
