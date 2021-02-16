@@ -9,6 +9,7 @@
   /* Keeps the content on a single line */
   white-space: nowrap; 
   margin: 0 auto; 
+  display: block;
   text-align: center;
   /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; 
