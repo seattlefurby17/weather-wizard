@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Carousel from 'react-bootstrap/Carousel';
+import './Forecast.css';
 
 // The location being passed in from App.js as an object-result from the user input
 const Forecast = ({location, baseUrl}) => {
@@ -94,7 +95,7 @@ const Forecast = ({location, baseUrl}) => {
 
   return(
     <Row className={forecastClass}>
-      <Carousel>
+      <Carousel className='forecast-box'>
         { forecastDisplay }
       </Carousel>
     </Row>

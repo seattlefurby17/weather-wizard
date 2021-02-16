@@ -1,0 +1,6 @@
+.forecast-box {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  min-height: 50vh;
+}

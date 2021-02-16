@@ -5,7 +5,7 @@ const Home = () => (
   <div className='container'>
     <div className='home-page app'>
       <div class="typewriter">
-        <h3>Welcome to the Solo weather station</h3>
+        <h3>Welcome to Solo Weather Station</h3>
         <h6>Your home to the most trusted weather temperature and forecast</h6>
       </div>
     </div>

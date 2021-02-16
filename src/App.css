@@ -12,7 +12,7 @@ nav ul {
   list-style: none;
   display: flex;
   background-color: black;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 nav ul li {
@@ -37,42 +37,40 @@ p {
 }
 
 .app {
+  min-height: 100vh;
   background-image: url(./images/winter.jpg);
-  background-size:cover ;
+  background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
+  padding: 25px;
 }
 
 .app-spring {
-  background-image: url(./images/spring.jpg); 
-  background-size:cover ;
+  background-image: url(./images/spring.jpg);
+  background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
 }
 
 .app-summer {
   background-image: url(./images/summer.jpg);
-  background-size:cover ;
-  /* background-position: bottom; */
+  background-size: cover;
+  background-position: bottom;
   transition: 0.4 ease-out;
 }
 
 .app-autumn {
   background-image: url(./images/autumn.jpg);
-  background-size:cover ;
-  /* background-position: bottom; */
+  background-size: cover;
+  background-position: bottom;
   transition: 0.4 ease-out;
-}
-
-main {
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
-  padding: 25px;
 }
 
 .footer {
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import './Temperature.css';
 import 'weather-icons/css/weather-icons.css';
 
 
@@ -76,7 +77,7 @@ const Temperature = ({location, baseUrl}) => {
   );
 
 
-  function maxminTemp(min, max) {
+  const maxminTemp = (min, max) => {
     if (max && min) {
       return (
         <h4>
@@ -87,16 +88,30 @@ const Temperature = ({location, baseUrl}) => {
     }
   }
   
-  const currentTemperature = result ? result.main.temp : 0;
+  const currentTemperature = result ? result.temp : 0;
+  console.log(currentTemperature);
 
   let weatherClass;
-  if (currentTemperature > 45 ) {
-    weatherClass = 'app-spring'
-  } else if (currentTemperature > 75) {
-    weatherClass = 'app-summer'
+
+  if (currentTemperature < 40) {
+    weatherClass = 'app';
+  }else if (currentTemperature > 40 && currentTemperature < 60) {
+    weatherClass = 'app-spring';
+  } else if (currentTemperature > 60 && currentTemperature < 70) {
+    weatherClass = 'app-autumn';
   } else {
-    weatherClass = 'app-autumn'
+    weatherClass ='app-summer';
   }
+
+  // if (currentTemperature > 45 && currentTemperature < 70) {
+  //   weatherClass = 'app-spring'
+  // } else if (currentTemperature < 40) {
+  //   weatherClass = 'app-summer'
+  // } else if (currentTemperature > 75) {
+  //   weatherClass = 'app-summer'
+  // } else {
+  //   weatherClass = 'app-autumn'
+  // }
 
   if (result === null) { 
     return  ( 
@@ -112,11 +127,11 @@ const Temperature = ({location, baseUrl}) => {
         </div>
       </div>
       <i className={`wi wi-owm-${result.icon}`}></i>
-      <div className={weatherClass}>
+      <div className={weatherClass} >
         <div className='weather-box'>
-          <h3>
+          <div className='temp'>
             { errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : `${Math.round(result.temp)}ºF`}
-          </h3>
+          </div>
           <div>{maxminTemp(result.temp_min, result.temp_max)}</div>
         </div>
       </div>
