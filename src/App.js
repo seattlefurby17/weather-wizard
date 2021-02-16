@@ -3,6 +3,8 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 import LocationSearchForm from './components/LocationSearchForm';
+import Container from 'react-bootstrap/Container';
+
 
 let BASE_URL =''
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
@@ -19,7 +21,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <Container className="App">
       <header className="App-header">
       {/* <h3> This is testing deployment </h3> */}
       <div className='weather-box'>
@@ -30,7 +32,7 @@ function App() {
           </div>
         </div>
       </header>
-    </div>
+    </Container>
   );
 }
 

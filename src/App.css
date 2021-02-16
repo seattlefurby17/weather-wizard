@@ -8,12 +8,6 @@ html {
   margin: 0;
 }
 
-.app {
-  width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -51,15 +45,23 @@ p {
 
 .app-spring {
   background-image: url(./images/spring.jpg); 
+  background-size:cover ;
+  background-position: bottom;
+  transition: 0.4 ease-out;
 }
 
 .app-summer {
   background-image: url(./images/summer.jpg);
-  
+  background-size:cover ;
+  /* background-position: bottom; */
+  transition: 0.4 ease-out;
 }
 
 .app-autumn {
   background-image: url(./images/autumn.jpg);
+  background-size:cover ;
+  /* background-position: bottom; */
+  transition: 0.4 ease-out;
 }
 
 main {
