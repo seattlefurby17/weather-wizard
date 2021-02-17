@@ -3,6 +3,7 @@
 }
 
 .typewriter h1 {
+  font-size: 8vw;
   display: flex;
   display: block;
   /* Ensures the content is not revealed until the animation */

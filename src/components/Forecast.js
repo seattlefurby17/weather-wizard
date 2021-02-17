@@ -28,13 +28,12 @@ const Forecast = ({location, baseUrl}) => {
       })
       .catch((error) => {
         setErrorMsg(error.message);
-        console.log(error.message);
       });
   }, [location, FORECAST_URL]);
 
   // if there is a location, display and vice versa
   if (forecast.length === 0) { 
-    return  ( 
+    return( 
        errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : <div>Please enter a city to begin......</div> 
     )
   }

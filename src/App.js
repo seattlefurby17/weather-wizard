@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Container className="App">
-      <div class="typewriter">
+      <div className="typewriter">
         <h1>Welcome to Solo Weather Station</h1>
       </div>
       <LocationSearchForm searchCurrentCityCallBack={ onLocationPicked } />

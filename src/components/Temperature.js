@@ -26,7 +26,6 @@ const Temperature = ({location, baseUrl}) => {
   }, []);
   
   useEffect(() => {
-    
     // if there is no location, exit
     if (!location) {return}  
 
@@ -35,9 +34,7 @@ const Temperature = ({location, baseUrl}) => {
       .then(result => {
         if(result.cod === 200) {
           setErrorMsg(null);
-          console.log(result);
           setResult(weatherBuilder(result));
-          console.log(weatherBuilder(result));
         } else {
           setResult(null);
           setErrorMsg(result.message);
@@ -45,7 +42,6 @@ const Temperature = ({location, baseUrl}) => {
       })
       .catch((error) => {
         setErrorMsg(error.message);
-        console.log(error.message);
       });
   },[location, TEMPERATURE_URL, weatherBuilder] );
   
@@ -89,7 +85,6 @@ const Temperature = ({location, baseUrl}) => {
   }
   
   const currentTemperature = result ? result.temp : 0;
-  console.log(currentTemperature);
 
   let weatherClass;
   if (currentTemperature < 40) {
