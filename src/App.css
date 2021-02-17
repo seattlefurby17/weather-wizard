@@ -1,3 +1,7 @@
+.container {
+  margin-top: 1rem;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -72,5 +76,11 @@ p {
   justify-content: space-evenly;
   margin-top: 10px;
   margin-bottom: 20px;
+  background-color: black;
+ 
+}
+
+.footer .text {
+  color: white;
 }
 

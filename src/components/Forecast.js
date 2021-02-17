@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import './Forecast.css';
+import 'weather-icons/css/weather-icons.css';
 
 const Forecast = ({location, baseUrl}) => {
   const FORECAST_URL = baseUrl + 'forecast?currentCity='
@@ -34,7 +35,7 @@ const Forecast = ({location, baseUrl}) => {
   // if there is a location, display and vice versa
   if (forecast.length === 0) { 
     return  ( 
-       errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : <div>Loading...</div> 
+       errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : <div>Please enter a city to begin......</div> 
     )
   }
 
@@ -46,7 +47,8 @@ const Forecast = ({location, baseUrl}) => {
     // reset the temp for the day
     if (day === arraysMaxMin.length){
       const forecastDate =  new Date(forecast[i].dt_txt)
-      arraysMaxMin.push({max_temp: -1000, min_temp: 1000, date:forecastDate})
+      const weatherIcon =  forecast[i].weather[0].id
+      arraysMaxMin.push({max_temp: -1000, min_temp: 1000, date:forecastDate, icon: weatherIcon})
     }
 
     const currentMinTemperature =  forecast[i].main.temp_min;
@@ -81,15 +83,23 @@ const Forecast = ({location, baseUrl}) => {
   const forecastDisplay = arraysMaxMin.map((dailyForecast, index) => (
     <Row md={1} xs={2} className='daily-forecast' key={index}> 
         <Col>{dateBuilder(dailyForecast.date)} </Col>
+        <Col><i className={`wi wi-owm-${dailyForecast.icon}`}></i></Col>
         <Col>H: {Math.round(dailyForecast.max_temp)}ºF</Col>
         <Col>L: {Math.round(dailyForecast.min_temp)}ºF</Col>
     </Row>
   ));
 
-  const weatherCondition = (forecast?.length && forecast[0].weather?.length) && forecast[0].weather[0].main
-  let forecastClass = (forecast?.length && forecast[0].main.temp> 50) ? 'app-spring' : 'app'
-  if (weatherCondition === 'Clouds') {
-    forecastClass = 'app-windy'
+  const currentTemperature = (forecast?.length && forecast[0].weather?.length) && forecast[0].main.temp
+  let forecastClass;
+
+  if (currentTemperature < 40) {
+    forecastClass = 'app';
+  }else if (currentTemperature > 40 && currentTemperature < 60) {
+    forecastClass = 'app-spring';
+  } else if (currentTemperature > 60 && currentTemperature < 70) {
+    forecastClass = 'app-autumn';
+  } else {
+    forecastClass ='app-summer';
   }
 
   return(

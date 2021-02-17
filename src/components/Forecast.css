@@ -6,25 +6,21 @@
 }
 
 .daily-forecast  {
+  position: relative;
+  display: inline-block;
   list-style: none;
   display: flex;
-  background-color: rgba(143, 140, 140, 0.4);
+  background-color: rgba(192, 189, 189, 0.5);
   color: rgb(58, 56, 56);
-  font-size: 44px;
-  font-weight: 400;
-  justify-content: space-evenly;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 300;
+  /* justify-content: space-evenly; */
+  margin-top: 20px;
+  margin-bottom: 30px;
   grid-column: 1 / -1;
+  box-shadow: 3px 6px rgba(10, 10, 10, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
 }
 
-.forecast-box forecast-temp {
-  color: white;
-  text-decoration: none;
-  padding: 20px;
-  /* grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 10px;
-  margin-bottom: 20px; */
-}

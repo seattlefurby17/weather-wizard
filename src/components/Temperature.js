@@ -92,7 +92,6 @@ const Temperature = ({location, baseUrl}) => {
   console.log(currentTemperature);
 
   let weatherClass;
-
   if (currentTemperature < 40) {
     weatherClass = 'app';
   }else if (currentTemperature > 40 && currentTemperature < 60) {
@@ -105,7 +104,7 @@ const Temperature = ({location, baseUrl}) => {
 
   if (result === null) { 
     return  ( 
-        <div>Loading...</div> 
+        <div>Please enter a city to begin...</div> 
     )
   }
 
@@ -114,7 +113,7 @@ const Temperature = ({location, baseUrl}) => {
       <div className='location-box'>
         <div className='location'> 
           {locationDisplay}
-          <i className={`wi wi-owm-${result.icon} display1`}></i>
+          <i className={`wi wi-owm-${result.icon}`}></i>
         </div>
       </div>
       <div  >

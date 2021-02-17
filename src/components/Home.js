@@ -4,10 +4,7 @@ import './Home.css';
 const Home = () => (
   <div className='container'>
     <div className='home-page app'>
-      <div class="typewriter">
-        <h3>Welcome to Solo Weather Station</h3>
-        <h6>Your home to the most trusted weather temperature and forecast</h6>
-      </div>
+      <h4>Your home to the most trusted weather temperature and forecast</h4>
     </div>
   </div>
   

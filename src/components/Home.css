@@ -2,8 +2,9 @@
   height: 90vh;
 }
 
-.typewriter h3 {
+.typewriter h1 {
   display: flex;
+  display: block;
   /* Ensures the content is not revealed until the animation */
   overflow: hidden;
   /* Keeps the content on a single line */
@@ -16,10 +17,11 @@
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-.typewriter h6 {
+h4 {
   text-align: center;
   display: block;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-top: 100px;
 }
 
 /* The typing effect */
