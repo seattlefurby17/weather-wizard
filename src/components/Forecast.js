@@ -31,12 +31,17 @@ const Forecast = ({location, baseUrl}) => {
       });
   }, [location, FORECAST_URL]);
 
-  // if there is a location, display and vice versa
-  if (forecast.length === 0) { 
+  // if there is forecast, display and vice versa
+  if (forecast.length === 0 && location === null) {
+    return  ( 
+      <div>Please enter a city to begin...</div> 
+  )
+  } else if (forecast.length === 0 && location){ 
     return( 
-       errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : <div>Please enter a city to begin......</div> 
+       errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : <div>Loading......</div> 
     )
   }
+
 
   const intervals = 8
   const arraysMaxMin = []

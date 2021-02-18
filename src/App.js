@@ -17,11 +17,6 @@ function App() {
 
   const [location, setLocation] = useState(null);
   const onLocationPicked = (currentCity) => {
-    // if (currentCity === null){
-    //   return (
-    //     <div>Please enter a city to begin...</div> 
-    //   )
-    // }
     setLocation(currentCity)
   }
   
@@ -29,11 +24,14 @@ function App() {
 
   return (
     <Container className="App">
-      <div className="typewriter">
-        <h1>Welcome to Solo Weather Station</h1>
-      </div>
-      <LocationSearchForm searchCurrentCityCallBack={ onLocationPicked } />
       <Navigation />
+      <header>
+        <div className="typewriter">
+          <h1>Welcome to Solo Weather Station</h1>
+        </div>
+      </header>
+      
+      <LocationSearchForm searchCurrentCityCallBack={ onLocationPicked } />
       <Main location={ location } baseUrl={ BASE_URL } />
   
       <footer className="footer">

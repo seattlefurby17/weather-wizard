@@ -2,21 +2,20 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Temperature.css';
 import 'weather-icons/css/weather-icons.css';
 
-
 const Temperature = ({location, baseUrl}) => {
   const TEMPERATURE_URL = baseUrl + 'temperature?currentCity='
   const[result, setResult] = useState(null);
   const[errorMsg, setErrorMsg] = useState(null);
   
   const weatherBuilder = useCallback((result) => {
-    // if (!result) {
-    //   return {}
-    // }
-    if (result === null) { 
-      return  ( 
-          <div>Loading...</div> 
-      )
+    if (!result) {
+      return {}
     }
+    // if (result === null) { 
+    //   return  ( 
+    //       <div>Loading...</div> 
+    //   )
+    // }
 
     const weather = { 
       city: result.name,
@@ -107,11 +106,15 @@ const Temperature = ({location, baseUrl}) => {
     weatherClass ='app-summer';
   }
 
-  if (result === null) { 
+  if (result === null && location) { 
     return  ( 
         <div>Loading...</div> 
     )
-  } 
+  } else if ( result === null && location === null){ 
+      return  ( 
+          <div>Please enter a city to begin...</div> 
+      )
+    }
 
 
   return(
