@@ -9,9 +9,15 @@ const Temperature = ({location, baseUrl}) => {
   const[errorMsg, setErrorMsg] = useState(null);
   
   const weatherBuilder = useCallback((result) => {
-    if (!result) {
-      return {}
+    // if (!result) {
+    //   return {}
+    // }
+    if (result === null) { 
+      return  ( 
+          <div>Loading...</div> 
+      )
     }
+
     const weather = { 
       city: result.name,
       country: result.sys.country,
@@ -27,7 +33,12 @@ const Temperature = ({location, baseUrl}) => {
   
   useEffect(() => {
     // if there is no location, exit
-    if (!location) {return}  
+    // if (!location) {return}  
+    if (!location){
+      return ( 
+        <div>Please enter a city to begin...</div> 
+      )
+    } 
 
     fetch(TEMPERATURE_URL + location,  { method: 'get', mode: 'cors'})
       .then(response => response.json())
@@ -63,7 +74,7 @@ const Temperature = ({location, baseUrl}) => {
     return `${day} ${month} ${date} ${year}`
   } 
 
-  // if there is a location, display and vice versa
+  // if there is a result, display and vice versa
   const locationDisplay = result && (
     <div>
         <p>{dateBuilder(new Date())}</p>
@@ -71,7 +82,6 @@ const Temperature = ({location, baseUrl}) => {
         {/* <p>{result.main}</p> */}
     </div>
   );
-
 
   const maxminTemp = (min, max) => {
     if (max && min) {
@@ -99,27 +109,33 @@ const Temperature = ({location, baseUrl}) => {
 
   if (result === null) { 
     return  ( 
-        <div>Please enter a city to begin...</div> 
+        <div>Loading...</div> 
     )
-  }
+  } 
+
 
   return(
     <main className={weatherClass}>
+
       <div className='location-box'>
         <div className='location'> 
           {locationDisplay}
           <i className={`wi wi-owm-${result.icon}`}></i>
         </div>
       </div>
-      <div  >
+
+      <div>
         <div className='weather-box'>
+
           <div className='temp'>
             { errorMsg ? <div><h2 className='error-msg'>{errorMsg}</h2></div> : `${Math.round(result.temp)}ºF`}
             <p className='condition'>{result.main}</p>
           </div>
-          
+    
           <div>{maxminTemp(result.temp_min, result.temp_max)}</div>
+
         </div>
+
       </div>
     </main>
   );

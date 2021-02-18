@@ -17,6 +17,11 @@ function App() {
 
   const [location, setLocation] = useState(null);
   const onLocationPicked = (currentCity) => {
+    // if (currentCity === null){
+    //   return (
+    //     <div>Please enter a city to begin...</div> 
+    //   )
+    // }
     setLocation(currentCity)
   }
   

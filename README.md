@@ -1,3 +1,9 @@
+This is a weather web app with the following tech stack:
+Frontend: React JavaScript
+Backend: Flask Python
+API: Fetch & Axios @ openweathermap.org
+Deployment: GitHub-Pages and Heroku
+
 After you clone the project, cd into the project and install all the dependencies by running $ yarn install. 
 
 Next you need to complete the instruction and installation of the project's backend which can be found at https://github.com/seattlefurby17/weather-wizard-api
