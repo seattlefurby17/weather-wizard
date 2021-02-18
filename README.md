@@ -1,3 +1,10 @@
+After you clone the project, cd into the project and install all the dependencies by running $ yarn install. 
+
+Next you need to complete the instruction and installation of the project's backend which can be found at https://github.com/seattlefurby17/weather-wizard-api
+
+To start the project, runs $ yarn start and $ yarn start-api 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
