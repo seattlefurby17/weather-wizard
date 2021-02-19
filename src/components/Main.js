@@ -3,11 +3,11 @@ import Home from './Home';
 import Temperature from './Temperature';
 import Forecast from './Forecast';
 
-const Main = ({location, baseUrl, redirect}) => {
+const Main = ({location, baseUrl}) => {
   return (
   <Switch>
     <Route exact path='/'>
-      <Home redirect={redirect} />
+      <Home/>
     </Route>
     <Route exact path='/temperature'>
       <Temperature location={location} baseUrl={baseUrl} />

@@ -4,7 +4,6 @@ import { HashRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
