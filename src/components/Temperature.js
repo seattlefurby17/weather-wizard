@@ -11,11 +11,6 @@ const Temperature = ({location, baseUrl}) => {
     if (!result) {
       return {}
     }
-    // if (result === null) { 
-    //   return  ( 
-    //       <div>Loading...</div> 
-    //   )
-    // }
 
     const weather = { 
       city: result.name,
@@ -32,13 +27,8 @@ const Temperature = ({location, baseUrl}) => {
   
   useEffect(() => {
     // if there is no location, exit
-    // if (!location) {return}  
-    if (!location){
-      return ( 
-        <div>Please enter a city to begin...</div> 
-      )
-    } 
-
+    if (!location) {return}  
+   
     fetch(TEMPERATURE_URL + location,  { method: 'get', mode: 'cors'})
       .then(response => response.json())
       .then(result => {
@@ -78,7 +68,6 @@ const Temperature = ({location, baseUrl}) => {
     <div>
         <p>{dateBuilder(new Date())}</p>
         <p> {result.city}, {result.country}</p>
-        {/* <p>{result.main}</p> */}
     </div>
   );
 

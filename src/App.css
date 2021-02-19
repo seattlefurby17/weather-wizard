@@ -1,5 +1,5 @@
 .container {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 0 !important;
 }
 
@@ -17,12 +17,12 @@ nav ul {
   list-style: none;
   display: flex;
   background-color: black;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   justify-content: space-evenly;
 }
 
 nav ul li {
-  padding: 20px;
+  padding: 10px;
 }
 
 nav ul li a {
@@ -31,14 +31,14 @@ nav ul li a {
 }
 
 .typewriter h1 {
-  font-size: 4vw;
+  font-size: 3vw;
   display: flex;
-  display: block;
   /* Ensures the content is not revealed until the animation */
   overflow: hidden;
   /* Keeps the content on a single line */
   white-space: nowrap;
   margin: 0 auto;
+  margin-bottom: 20px;
   display: block;
   text-align: center;
   /* Gives that scrolling effect as the typing happens */
@@ -60,7 +60,7 @@ p {
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
-  padding: 25px;
+  padding: 50px;
 }
 
 .app-spring {
@@ -96,6 +96,6 @@ p {
 
 .footer .text {
   color: white;
-  padding: 20px;
+  padding: 10px;
 }
 

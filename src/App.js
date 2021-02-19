@@ -24,23 +24,20 @@ function App() {
 
   return (
     <Container className="App">
-      <Navigation />
+      <LocationSearchForm searchCurrentCityCallBack={ onLocationPicked } />
       <header>
         <div className="typewriter">
           <h1>Welcome to Solo Weather Station</h1>
         </div>
       </header>
-      
-      <LocationSearchForm searchCurrentCityCallBack={ onLocationPicked } />
+      <Navigation />
       <Main location={ location } baseUrl={ BASE_URL } />
-  
       <footer className="footer">
         <a className='text' href={tagUrl}> Copyright</a>
         <a className='text' href={tagUrl}>All Rights Reserved</a>
         <a className='text' href={tagUrl}>Terms of Uses</a>
         <a className='text' href={tagUrl}>HanhSolo</a>
       </footer>
-
     </Container>
   );
 }

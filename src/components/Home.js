@@ -4,7 +4,7 @@ import './Home.css';
 const Home = () => (
   <div className='container'>
     <div className='home-page app'>
-      <h3>Your home to the most trusted weather temperature and forecast</h3>
+      <h2>Your home to the most trusted weather temperature and forecast</h2>
     </div>
   </div>
   
