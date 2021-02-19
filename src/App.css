@@ -1,5 +1,5 @@
 .container {
-  margin-top: 0.5rem;
+  margin-top: 0 !important;
   padding: 0 !important;
 }
 
@@ -58,8 +58,6 @@ p {
   min-height: 100vh;
   background-image: url(./images/winter.jpg);
   background-size: cover;
-  background-position: bottom;
-  transition: 0.4 ease-out;
   padding: 50px;
 }
 
