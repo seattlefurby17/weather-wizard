@@ -34,7 +34,6 @@ const Temperature = ({location, baseUrl, setRedirect}) => {
       .then(result => {
         if(result.cod === 200) {
           setErrorMsg(null);
-          setRedirect(true);
           setResult(weatherBuilder(result));
         } else {
           setResult(null);

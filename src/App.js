@@ -14,10 +14,12 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
 }
 
 function App() {
+  const [redirect, setRedirect] = useState(false);
 
   const [location, setLocation] = useState(null);
   const onLocationPicked = (currentCity) => {
     setLocation(currentCity)
+    setRedirect(true)
   }
   
   const tagUrl ='https://seattlefurby17.github.io/weather-wizard';
@@ -32,7 +34,7 @@ function App() {
       </header>
       
       <LocationSearchForm searchCurrentCityCallBack={ onLocationPicked } />
-      <Main location={ location } baseUrl={ BASE_URL } />
+      <Main location={ location } baseUrl={ BASE_URL } redirect= {redirect} />
   
       <footer className="footer">
         <a className='text' href={tagUrl}> Copyright</a>
