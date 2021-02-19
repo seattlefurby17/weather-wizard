@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Temperature.css';
 import 'weather-icons/css/weather-icons.css';
 
-const Temperature = ({location, baseUrl}) => {
+const Temperature = ({location, baseUrl, setRedirect}) => {
   const TEMPERATURE_URL = baseUrl + 'temperature?currentCity='
   const[result, setResult] = useState(null);
   const[errorMsg, setErrorMsg] = useState(null);
@@ -11,12 +11,7 @@ const Temperature = ({location, baseUrl}) => {
     if (!result) {
       return {}
     }
-    // if (result === null) { 
-    //   return  ( 
-    //       <div>Loading...</div> 
-    //   )
-    // }
-
+  
     const weather = { 
       city: result.name,
       country: result.sys.country,
@@ -32,18 +27,14 @@ const Temperature = ({location, baseUrl}) => {
   
   useEffect(() => {
     // if there is no location, exit
-    // if (!location) {return}  
-    if (!location){
-      return ( 
-        <div>Please enter a city to begin...</div> 
-      )
-    } 
+    if (!location) {return}  
 
     fetch(TEMPERATURE_URL + location,  { method: 'get', mode: 'cors'})
       .then(response => response.json())
       .then(result => {
         if(result.cod === 200) {
           setErrorMsg(null);
+          setRedirect(true);
           setResult(weatherBuilder(result));
         } else {
           setResult(null);
@@ -53,7 +44,7 @@ const Temperature = ({location, baseUrl}) => {
       .catch((error) => {
         setErrorMsg(error.message);
       });
-  },[location, TEMPERATURE_URL, weatherBuilder] );
+  },[location, TEMPERATURE_URL, weatherBuilder, setRedirect] );
   
   
   const dateBuilder= (data) => {
