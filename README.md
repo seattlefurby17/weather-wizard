@@ -1,4 +1,4 @@
-This is a weather web app with the following tech stack:
+This is a lightweight weather web app with the following tech stack:
 Frontend: React JavaScript
 Backend: Flask Python
 API: Fetch & Axios @ openweathermap.org
