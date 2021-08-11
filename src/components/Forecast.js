@@ -42,7 +42,6 @@ const Forecast = ({location, baseUrl}) => {
     )
   }
 
-
   const intervals = 8
   const arraysMaxMin = []
 
