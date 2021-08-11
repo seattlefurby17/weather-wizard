@@ -97,7 +97,7 @@ const Temperature = ({location, baseUrl}) => {
 
   if (result === null && location) { 
     return  ( 
-        <div>Loading...</div> 
+        <div>City not found...</div> 
     )
   } else if ( result === null && location === null){ 
       return  ( 
